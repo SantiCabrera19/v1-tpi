@@ -25,30 +25,15 @@ import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import { Header } from '@/components/component/Header'
+import { Footer } from '@/components/component/Footer'
+import { MapAside } from '@/components/component/map-aside'
+import { ProductCarousel } from "@/components/component/product-carousel"
 
 export function PaginaSpa() {
   return (
     (<div className="bg-background text-foreground">
-      <header className="flex items-center justify-between px-4 py-3 md:px-6 md:py-4">
-        <Link href="#" className="flex items-center gap-2" prefetch={false}>
-          <SpadeIcon className="h-6 w-6" />
-          <span className="text-lg font-semibold">Spa Oasis</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-4">
-          <Link
-            href="#"
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}>
-            Acceso personal
-          </Link>
-          <Link
-            href="#"
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}>
-            Acceso de clientes
-          </Link>
-        </nav>
-      </header>
+      <Header />
       <main>
         <section className="relative h-[70vh] md:h-[80vh]">
           <img
@@ -62,20 +47,20 @@ export function PaginaSpa() {
             className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/0" />
           <div
             className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Escapa al Spa Oasis</h1>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Escapa al Spa Sentirse Bien</h1>
             <p className="mt-4 max-w-md text-muted-foreground md:text-lg">
               Experimenta lo máximo en relajación y rejuvenecimiento en nuestro lujoso spa. Disfruta de nuestros
               tratamientos exclusivos y promociones.
             </p>
             <div className="mt-6 flex flex-col gap-2 sm:flex-row">
               <Link
-                href="#"
+                href="/products"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}>
                 Ver productos
               </Link>
               <Link
-                href="#"
+                href="#about"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}>
                 Más información
@@ -83,34 +68,10 @@ export function PaginaSpa() {
             </div>
           </div>
         </section>
-        <section className="py-12 md:py-16 lg:py-20 flex justify-center items-center">
-  <div className="container mx-auto">
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <div className="space-y-4 text-center">
-        <GiftIcon className="h-12 w-12 text-primary mx-auto" />
-        <h3 className="text-xl font-semibold">Masajes relajantes</h3>
-        <p className="text-muted-foreground">
-          Disfruta de nuestros tratamientos de masaje exclusivos, diseñados para eliminar el estrés y la tensión.
-        </p>
-      </div>
-      <div className="space-y-4 text-center">
-        <SmileIcon className="h-12 w-12 text-primary mx-auto" />
-        <h3 className="text-xl font-semibold">Faciales rejuvenecedores</h3>
-        <p className="text-muted-foreground">
-          Revitaliza tu piel con nuestros lujosos tratamientos faciales, adaptados a tus necesidades individuales.
-        </p>
-      </div>
-      <div className="space-y-4 text-center">
-        <BathIcon className="h-12 w-12 text-primary mx-auto" />
-        <h3 className="text-xl font-semibold">Rituales relajantes</h3>
-        <p className="text-muted-foreground">
-          Relájate en nuestras tranquilas instalaciones del spa, incluyendo saunas, baños de vapor y salas de relajación.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-        <section className="bg-muted py-12 md:py-16 lg:py-20 flex justify-center">
+        <section id= "products" className="py-12 md:py-16 lg:py-20 flex justify-center items-center">
+          <ProductCarousel />
+        </section>
+        <section id = "about" className="bg-muted py-12 md:py-16 lg:py-20 flex justify-center">
           <div className="container">
             <div className="grid gap-8 md:grid-cols-2">
               <div>
@@ -123,9 +84,9 @@ export function PaginaSpa() {
                   style={{ aspectRatio: "800/500", objectFit: "cover" }} />
               </div>
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Acerca de Spa Oasis</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Acerca de Spa Sentirse Bien</h2>
                 <p className="text-muted-foreground md:text-lg">
-                  Spa Oasis es un lujoso retiro dedicado a brindar experiencias de bienestar excepcionales. Nuestro
+                  Spa Sentirse Bien es un lujoso retiro dedicado a brindar experiencias de bienestar excepcionales. Nuestro
                   equipo de terapeutas y esteticistas capacitados se compromete a ayudarte a alcanzar un estado de
                   relajación profunda y rejuvenecimiento.
                 </p>
@@ -134,34 +95,16 @@ export function PaginaSpa() {
                   vida cotidiana. Disfruta de nuestra gama de tratamientos exclusivos, desde masajes relajantes hasta
                   faciales revitalizantes, y déjanos ayudarte a relajarte y recargarte.
                 </p>
-                <Link
-                  href="#"
-                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}>
-                  Más información
-                </Link>
               </div>
             </div>
           </div>
         </section>
         
-        <section className="bg-white py-12 md:py-16 lg:py-20 flex justify-center">
+        <section id = "contact" className="bg-white py-12 md:py-16 lg:py-20 flex justify-center">
           <div className="container">
             <div className="grid gap-8 md:grid-cols-2">
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Nuestros valores</h2>
-                <p className="text-muted-foreground md:text-lg">
-                  En Spa Oasis, nos comprometemos a brindar una experiencia de bienestar excepcional a nuestros
-                  clientes. Nuestros valores fundamentales incluyen:
-                </p>
-                <ul className="space-y-2 text-muted-foreground md:text-lg">
-                  <li>- Excelencia en el servicio</li>
-                  <li>- Atención personalizada</li>
-                  <li>- Sostenibilidad ambiental</li>
-                  <li>- Bienestar integral</li>
-                </ul>
-              </div>
-              <div className="space-y-4">
+              <MapAside />
+              <div className="space-y-4 bg-gradient-to-br from-pink-100 to-pink-200 p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Contáctanos</h2>
                 <p className="text-muted-foreground md:text-lg">
                   Estamos aquí para ayudarte a planificar tu experiencia de spa perfecta. Ponte en contacto con nuestro
@@ -181,26 +124,7 @@ export function PaginaSpa() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted py-6 text-sm">
-        <div
-          className="container flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-muted-foreground">&copy; 2024 Spa Oasis. Todos los derechos reservados.</p>
-          <nav className="flex gap-4">
-            <Link
-              href="#"
-              className="text-muted-foreground hover:underline underline-offset-4"
-              prefetch={false}>
-              Política de privacidad
-            </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:underline underline-offset-4"
-              prefetch={false}>
-              Términos de servicio
-            </Link>
-          </nav>
-        </div>
-      </footer>
+      <Footer />
     </div>)
   );
 }

@@ -1,4 +1,3 @@
-import { HeroSection } from "@/components/component/hero-section";
 import { PaginaSpa } from "@/components/component/pagina-spa";
 
 

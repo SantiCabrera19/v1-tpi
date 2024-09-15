@@ -34,22 +34,22 @@ export function NavigationButtons() {
   }, [])
 
   return (
-    (<div className="flex space-x-4">
+    <div className="flex space-x-4">
       <Button
         href="#about"
-        className="nav-button bg-pink-500 text-white border border-pink-600 hover:bg-pink-600 transition-colors duration-300">
+        className="nav-button px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
         Sobre Nosotros
       </Button>
       <Button
         href="#contact"
-        className="nav-button bg-pink-500 text-white border border-pink-600 hover:bg-pink-600 transition-colors duration-300">
+        className="nav-button px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
         Contactanos
       </Button>
       <Button
         href="#products"
-        className="nav-button bg-pink-500 text-white border border-pink-600 hover:bg-pink-600 transition-colors duration-300">
+        className="nav-button px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
         Productos
       </Button>
-    </div>)
+    </div>
   );
 }

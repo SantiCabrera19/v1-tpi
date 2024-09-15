@@ -6,7 +6,7 @@ import { Instagram, Twitter, Facebook } from 'lucide-react'
 export function Footer() {
   return (
     (<footer
-      className="w-full bg-gradient-to-r from-pink-200 via-pink-300 to-pink-200 text-gray-800 shadow-lg">
+      className="w-full bg-gradient-to-r from-pink-100 via-pink-200 to-pink-100 text-gray-800 shadow-lg">
       <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
         <div
           className="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0">

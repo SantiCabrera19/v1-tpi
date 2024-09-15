@@ -6,13 +6,14 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const products = [
-  { id: 1, name: "Aceite Esencial de Lavanda", description: "Relajante y calmante", image: "/placeholder.svg?height=200&width=200" },
-  { id: 2, name: "Sales de Baño de Rosas", description: "Hidratante y aromático", image: "/placeholder.svg?height=200&width=200" },
-  { id: 3, name: "Crema Facial de Aloe Vera", description: "Refrescante y nutritiva", image: "/placeholder.svg?height=200&width=200" },
-  { id: 4, name: "Vela de Masaje de Vainilla", description: "Relajante y sensual", image: "/placeholder.svg?height=200&width=200" },
-  { id: 5, name: "Exfoliante Corporal de Coco", description: "Suavizante y revitalizante", image: "/placeholder.svg?height=200&width=200" },
-  { id: 6, name: "Mascarilla de Arcilla Verde", description: "Purificante y tonificante", image: "/placeholder.svg?height=200&width=200" },
+  { id: 1, name: "Aceite Esencial de Lavanda", description: "Relajante y calmante", image: "/producto.jpg" },
+  { id: 2, name: "Sales de Baño de Rosas", description: "Hidratante y aromático", image: "/producto.jpg" },
+  { id: 3, name: "Crema Facial de Aloe Vera", description: "Refrescante y nutritiva", image: "/producto.jpg" },
+  { id: 4, name: "Vela de Masaje de Vainilla", description: "Relajante y sensual", image: "/producto.jpg" },
+  { id: 5, name: "Exfoliante Corporal de Coco", description: "Suavizante y revitalizante", image: "/producto.jpg" },
+  { id: 6, name: "Mascarilla de Arcilla Verde", description: "Purificante y tonificante", image: "/producto.jpg" },
 ]
+
 
 export function ProductCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)

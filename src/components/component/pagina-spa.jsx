@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Header } from '@/components/component/Header';
-import { Footer } from '@/components/component/Footer';
+import { Header } from '@/components/component/header';
+import { Footer } from '@/components/component/footer';
 import { MapAside } from '@/components/component/map-aside';
 import { ProductCarousel } from "@/components/component/product-carousel";
 

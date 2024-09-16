@@ -48,7 +48,7 @@ export function ProductCarousel() {
     (<div className="relative w-full max-w-6xl mx-auto my-12 px-4">
       <div className="absolute top-0 right-0">
         <Link href="/products">
-          <Button className="bg-pink-500 text-white hover:bg-pink-600 py-6">
+          <Button className="bg-blue-500 text-white hover:bg-blue-600 py-2 px-4 rounded-lg transition-colors duration-300 !important">
             Ver más productos
           </Button>
         </Link>

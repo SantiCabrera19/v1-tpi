@@ -6,6 +6,7 @@ import { Header } from '@/components/component/header';
 import { Footer } from '@/components/component/footer';
 import { MapAside } from '@/components/component/map-aside';
 import { ProductCarousel } from "@/components/component/product-carousel";
+import { CommentsJsx } from "@/components/component/components-comments";
 
 export function PaginaSpa() {
 
@@ -110,6 +111,7 @@ export function PaginaSpa() {
         </section>
       </main>
       <Footer />
+      <CommentsJsx />
     </div>
   );
 }
